@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Card Validator</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="proceed_payment">Proceed Payment</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="exp_date">EXP Date</string>
+    <string name="cvv">CVV</string>
+    <string name="card_number">Card number</string>
+    <string name="great_your_card_detail_is_valid_and_you_are_ready_to_make_payment">Great! your card detail is valid and you are ready to make payment.</string>
+    <string name="enter_card_detail">enter card detail</string>
+</resources>
