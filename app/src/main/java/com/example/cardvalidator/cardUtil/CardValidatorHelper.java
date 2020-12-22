@@ -59,6 +59,10 @@ public class CardValidatorHelper {
                 listener.onInvalidCard(INVALID_LAST_NAME, "could contain only alphabetical and spaces");
                 valid = false;
             }
+            if (!cardValidator.isValidCVVNumber()) {
+                listener.onInvalidCard(INVALID_CVV, "invalid CVV code");
+                valid = false;
+            }
 
             if (!cardValidator.isValidCard() || !cardValidator.isValidCreditCardNumber()) {
                 listener.onInvalidCard(INVALID_CARD_NUMBER, "invalid card");

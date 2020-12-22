@@ -2,7 +2,7 @@ package com.example.cardvalidator.model;
 
 public class CardDetail {
     private String firstName, lastName;
-    private int cvv;
+    private String cvv;
     private String expDate;
     private String cardNumber;
 
@@ -22,11 +22,11 @@ public class CardDetail {
         this.lastName = lastName;
     }
 
-    public int getCvv() {
+    public String getCvv() {
         return cvv;
     }
 
-    public void setCvv(int cvv) {
+    public void setCvv(String cvv) {
         this.cvv = cvv;
     }
 

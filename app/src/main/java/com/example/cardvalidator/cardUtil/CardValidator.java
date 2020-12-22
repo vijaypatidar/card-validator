@@ -4,6 +4,8 @@ import com.example.cardvalidator.model.CardDetail;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public abstract class CardValidator {
     protected CardDetail cardDetail;
@@ -25,6 +27,14 @@ public abstract class CardValidator {
         }
         sum = sum * 9;
         return sum % 10 == ar[15];
+    }
+
+    public boolean isValidCVVNumber() {
+        // Regex to check valid CVV number.
+        String regex = "^[0-9]{3,4}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(cardDetail.getCvv());
+        return m.matches();
     }
 
     private int sumDigit(int n) {

@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity implements CardValidatorHelp
         });
 
         editCvvCode.addTextChangedListener((MyTextWatcher) (s, start, before, count) -> {
-            if (s.length() == 3) editFirstName.requestFocus();
-            else if (s.length() > 3) {
-                editCvvCode.setText(s.subSequence(0, 3));
+            if (s.length() == 4) editFirstName.requestFocus();
+            else if (s.length() > 4) {
+                editCvvCode.setText(s.subSequence(0, 4));
             }
         });
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements CardValidatorHelp
             try {
                 CardDetail cardDetail = new CardDetail();
                 cardDetail.setCardNumber(editCardNumber.getText().toString());
-                cardDetail.setCvv(Integer.parseInt(editCvvCode.getText().toString()));
+                cardDetail.setCvv(editCvvCode.getText().toString().trim());
                 cardDetail.setExpDate(editExpDate.getText().toString());
                 cardDetail.setFirstName(editFirstName.getText().toString().trim());
                 cardDetail.setLastName(editLastName.getText().toString().trim());
